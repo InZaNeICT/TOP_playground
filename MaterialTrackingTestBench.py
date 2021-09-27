@@ -32,7 +32,7 @@ def rfidtest():
         except:
             pass
 
-def questions():
+def Questions():
     run = True
     yes = {'y'}
     no = {'n'}
@@ -53,18 +53,27 @@ def questions():
     print("Your answer is saved to database")
     saveToDatabase()
 
+def Saver():
+    run = True
 
 
-
-            
-                
-
-
-
- 
 
 # MAIN PROGRAM
+run = True
+while run:
+    if id:
+        Questions()
+        saveToDatabase()
+    else:
+        rfidtest()
+        pass
+    
 
+    
+
+
+    
+        
 # MAIN PROGRAM
 # YOUR CODE HERE #
 

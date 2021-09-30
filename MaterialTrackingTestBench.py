@@ -58,16 +58,7 @@ def Saver():
     #  Ei tästä tule mitään
     while run:
         try:
-            commit.suicide()
-            if succeed:
-                print("good job")
-                return
-            elif Failed:
-                print("i suck ass")
-                return False
-        except:
-            print("Samu saves us")
-            return True
+            
 
 # MAIN PROGRAM
 run = True

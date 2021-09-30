@@ -55,8 +55,7 @@ def Questions():
 
 def Saver():
     run = True
-    #ei toimi
-    id = {'1' ,'2' ,'3'}
+    #  Ei tästä tule mitään
     while run:
         try:
             commit.suicide()
@@ -66,7 +65,9 @@ def Saver():
             elif Failed:
                 print("i suck ass")
                 return False
-                
+        except:
+            print("Samu saves us")
+            return True
 
 # MAIN PROGRAM
 run = True

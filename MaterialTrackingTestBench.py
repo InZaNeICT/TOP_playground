@@ -45,11 +45,11 @@ def Questions():
             if choice in yes:
                 print("are you sure [y/n]?")
                 if choice in yes:
-                    print("homo")
+                    pass
                 elif choice in no:
                     return
             elif choice in no:
-               print("olet neekeri")
+                pass
         except:
             print("Your answer is saved to database")
             saveToDatabase()

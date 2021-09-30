@@ -55,8 +55,18 @@ def Questions():
 
 def Saver():
     run = True
-
-
+    #ei toimi
+    id = {'1' ,'2' ,'3'}
+    while run:
+        try:
+            commit.suicide()
+            if succeed:
+                print("good job")
+                return
+            elif Failed:
+                print("i suck ass")
+                return False
+                
 
 # MAIN PROGRAM
 run = True

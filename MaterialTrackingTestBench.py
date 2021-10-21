@@ -30,26 +30,7 @@ def rfidtagtest():
                 print("Sorry, rfid was not found")
         except: 
             pass
-''''
-# YOUR CODE HERE #
-def rfidtest():
-    run = True
-    while run:
-        try:
-            print("press enter to ask If rfid was found")
-            if keyboard.is_pressed("Enter"):
-                id = getTag()
-            if id:
-                print("rfid was found")
-                saveToDatabase()
-                print("Saving to database")
-                return True
-            else:
-                print("rfid not found")
-                pass
-        except:
-            pass
-'''
+
 def Questions():
     run = True
     yes = {'y'}
@@ -79,6 +60,7 @@ run = True
 while run:
     rfidtagtest()
     Questions()
+    pass
 
     
 

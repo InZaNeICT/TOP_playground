@@ -1,6 +1,6 @@
 import random
 import sys
-# import keyboard
+import keyboard
 
 
 
@@ -10,10 +10,26 @@ def saveToDatabase(input):
 
 def getTag() -> int:
     if random.random() > 0.9:
-        return random.randint(10000, sys.maxint)
+        return random.randint(10000, sys.maxsize)
     else:
         return None
 # DONT TOUCH #
+def rfidtagtest():
+    run = True
+    print("Please press enter to fetch a tag")
+    while run:
+        try:
+            if keyboard.is_pressed("Enter"):
+                rfid = getTag()
+            if rfid:
+                print("Congratulations, rfid-tag was found")
+                saveToDatabase
+                print("Your tag is being saved to database")
+                return True
+            else:
+                print("Sorry, rfid was not found")
+        except: 
+            pass
 ''''
 # YOUR CODE HERE #
 def rfidtest():
@@ -43,7 +59,7 @@ def Questions():
             print("Did the test succeed [y/n]?")
             choice = input().lower()
             if choice in yes:
-                print("are you sure [y/n]?")
+                print("Are you sure [y/n]?")
                 if choice in yes:
                     pass
                 elif choice in no:
@@ -61,9 +77,8 @@ def Saver():
 # MAIN PROGRAM
 run = True
 while run:
-    if Questions():
-        print("xd")
-        run = False
+    rfidtagtest()
+    Questions()
 
     
 

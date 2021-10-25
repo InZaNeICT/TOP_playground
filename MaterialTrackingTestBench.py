@@ -42,9 +42,15 @@ def Questions():
             choice = input().lower()
             if choice in yes:
                 os.system('cls')
+                print("Are you sure [y/n]?")
+                if choice in yes:
+                    pass
+                elif choice in no:
+                     return
         except:
-            pass
-
+            print("Your answer is saved to database")
+            saveToDatabase()
+'''
     while True:
         try:
             os.system('cls')
@@ -56,11 +62,10 @@ def Questions():
         except:
             print("Your answer is saved to database")
             saveToDatabase()
-'''
-def Saver():
-    run = True
-    
-'''
+'''''''''
+
+
+
 # MAIN PROGRAM
 run = True
 while run:
@@ -78,7 +83,8 @@ while run:
 # MAIN PROGRAM
 # YOUR CODE HERE #
 
-'''
+''''''
+'''''''''
 TIPS:
 python keypress:
 https://java2blog.com/detect-keypress-python/

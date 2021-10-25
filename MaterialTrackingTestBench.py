@@ -1,6 +1,7 @@
 import random
 import sys
 import keyboard
+import os
 
 
 
@@ -40,13 +41,18 @@ def Questions():
             print("Did the test succeed [y/n]?")
             choice = input().lower()
             if choice in yes:
-                print("Are you sure [y/n]?")
-                if choice in yes:
-                    pass
-                elif choice in no:
-                    return
-            elif choice in no:
+                os.system('cls')
+        except:
+            pass
+
+    while True:
+        try:
+            os.system('cls')
+            print("Are you sure [y/n]?")
+            if choice in yes:
                 pass
+            elif choice in no:
+                return
         except:
             print("Your answer is saved to database")
             saveToDatabase()

@@ -42,14 +42,15 @@ def Questions():
             choice = input().lower()
             if choice in yes:
                 os.system('cls')
-                print("Are you sure [y/n]?")
-                if choice in yes:
-                    pass
-                elif choice in no:
-                     return
+            elif choice in no:
+                return
+            print("Are you sure [y/n]?")
+            if choice in yes:
+                run = False
+            elif choice in no:
+                    return
         except:
-            print("Your answer is saved to database")
-            saveToDatabase()
+            return
 '''
     while True:
         try:

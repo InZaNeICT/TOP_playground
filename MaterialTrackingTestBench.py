@@ -16,13 +16,21 @@ def getTag() -> int:
     else:
         return None
 # DONT TOUCH #
+# Hakee ID:n kun painetaan enteriä, jos ID:tä ei löydetä niin jatketaan sen etsimistä, tallennetaan ID tietokantaan.#
+# Painetaan enter -> etsitaan tagi -> tarkistetaan tagi -> tallennetaan tagi
+'''
+painetaan enter:
+    etsitaan tagi
+    if tag:
+        tallennetaan taki
+'''
 def rfidtagtest():
     run = True
     print("Please press enter to fetch a tag")
     while run:
-        try:
-            if keyboard.is_pressed("Enter"):
-                rfid = getTag()
+        if keyboard.is_pressed("Enter"):
+            time.sleep(0.3)
+            rfid = getTag()
             if rfid:
                 time.sleep(1)
                 print("Congratulations, rfid-tag was found")
@@ -33,8 +41,7 @@ def rfidtagtest():
                 return True
             else:
                 print("Sorry, rfid was not found")
-        except: 
-            pass
+
 
 def Questions():
     run1 = True
@@ -42,6 +49,7 @@ def Questions():
     no = {'n'}
     while run1:
         try:
+            os.system('cls')
             print("Did the test succeed [y/n]?")
             choice = input().lower()
             if choice in yes:

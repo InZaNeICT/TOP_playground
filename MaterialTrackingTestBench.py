@@ -2,6 +2,7 @@ import random
 import sys
 import keyboard
 import os
+import time
 
 
 
@@ -23,9 +24,12 @@ def rfidtagtest():
             if keyboard.is_pressed("Enter"):
                 rfid = getTag()
             if rfid:
+                time.sleep(1)
                 print("Congratulations, rfid-tag was found")
+                time.sleep(1)
                 saveToDatabase
                 print("Your tag is being saved to database")
+                time.sleep(1)
                 return True
             else:
                 print("Sorry, rfid was not found")
@@ -33,24 +37,33 @@ def rfidtagtest():
             pass
 
 def Questions():
-    run = True
+    run1 = True
     yes = {'y'}
     no = {'n'}
-    while run:
+    while run1:
         try:
             print("Did the test succeed [y/n]?")
             choice = input().lower()
             if choice in yes:
                 os.system('cls')
+                print("Nice")
+                run1 = False
             elif choice in no:
                 return
+        except:
+            return
+    run2 = True
+    while run2:
+        try:
             print("Are you sure [y/n]?")
+            choice = input().lower()
             if choice in yes:
-                run = False
+                run2 = False
             elif choice in no:
                     return
         except:
-            return
+            print("Your answer is saved to database")
+            saveToDatabase()
 '''
     while True:
         try:
@@ -72,6 +85,7 @@ run = True
 while run:
     rfidtagtest()
     Questions()
+    run = False
     pass
 
     
